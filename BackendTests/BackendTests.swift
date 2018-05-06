@@ -17,6 +17,7 @@ class BackendTests: XCTestCase {
             let manager = WallpaperManager()
             g.enter()
             manager.refreshWallpapers { success in
+                print(manager.allWallpapers)
                 if success {
                     manager.loadFullImage(for: manager.allWallpapers.first!) { image in
                         print(image)

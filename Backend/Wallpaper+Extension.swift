@@ -31,7 +31,7 @@ extension Wallpaper {
     @inline(__always)
     public func getImageURL(for size: CGSize, resizeOption: ResizeOption = .fit)-> URL {
         let path = fileURL!.replacingOccurrences(of: "http:/", with: "").replacingOccurrences(of: ".mwa", with: "")
-        return URL(string: "http://imangazo.mrcdn.info\(path)/phone_\(size.width)_\(size.height)_\(resizeOption.rawValue).jpg")!
+        return URL(string: "http://imangazo.mrcdn.info\(path.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed)!)/phone_\(size.width)_\(size.height)_\(resizeOption).jpg")!
     }
     
 }

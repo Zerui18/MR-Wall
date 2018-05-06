@@ -7,9 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		019592BA209EDF7800C445FE /* WallpaperCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019592B9209EDF7800C445FE /* WallpaperCell.swift */; };
+		019592D5209EEC0500C445FE /* Nuke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 019592C0209EEC0400C445FE /* Nuke.framework */; };
+		019592D6209EEC0500C445FE /* Nuke.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 019592C0209EEC0400C445FE /* Nuke.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		019592E8209EEC5300C445FE /* DataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019592DD209EEC5200C445FE /* DataLoader.swift */; };
+		019592E9209EEC5300C445FE /* ImagePipeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019592DE209EEC5200C445FE /* ImagePipeline.swift */; };
+		019592EA209EEC5300C445FE /* ImagePreheater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019592DF209EEC5200C445FE /* ImagePreheater.swift */; };
+		019592EB209EEC5300C445FE /* Deprecated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019592E0209EEC5200C445FE /* Deprecated.swift */; };
+		019592EC209EEC5300C445FE /* DataCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019592E1209EEC5200C445FE /* DataCache.swift */; };
+		019592ED209EEC5300C445FE /* ImageProcessing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019592E2209EEC5200C445FE /* ImageProcessing.swift */; };
+		019592EE209EEC5300C445FE /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019592E3209EEC5200C445FE /* ImageView.swift */; };
+		019592EF209EEC5300C445FE /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019592E4209EEC5200C445FE /* ImageCache.swift */; };
+		019592F0209EEC5300C445FE /* ImageRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019592E5209EEC5200C445FE /* ImageRequest.swift */; };
+		019592F1209EEC5300C445FE /* ImageDecoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019592E6209EEC5300C445FE /* ImageDecoding.swift */; };
+		019592F2209EEC5300C445FE /* Internal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019592E7209EEC5300C445FE /* Internal.swift */; };
+		019592F6209EFDEF00C445FE /* WallpaperDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019592F5209EFDEF00C445FE /* WallpaperDetailViewController.swift */; };
+		019592F8209F009500C445FE /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019592F7209F009500C445FE /* UIViewController+Alert.swift */; };
 		01A173D2209DF15E003009C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A173D1209DF15E003009C5 /* AppDelegate.swift */; };
-		01A173D4209DF15E003009C5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A173D3209DF15E003009C5 /* ViewController.swift */; };
-		01A173D7209DF15E003009C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01A173D5209DF15E003009C5 /* Main.storyboard */; };
+		01A173D4209DF15E003009C5 /* WallpaperCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A173D3209DF15E003009C5 /* WallpaperCollectionViewController.swift */; };
 		01A173D9209DF160003009C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01A173D8209DF160003009C5 /* Assets.xcassets */; };
 		01A173DC209DF160003009C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01A173DA209DF160003009C5 /* LaunchScreen.storyboard */; };
 		01A173F1209DF1C4003009C5 /* Backend.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01A173E8209DF1C3003009C5 /* Backend.framework */; };
@@ -26,6 +41,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		019592D3209EEC0500C445FE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 01A173C6209DF15E003009C5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 019592BF209EEC0400C445FE;
+			remoteInfo = Nuke;
+		};
 		01A173F2209DF1C4003009C5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 01A173C6209DF15E003009C5 /* Project object */;
@@ -57,6 +79,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				01A173FE209DF1C4003009C5 /* Backend.framework in Embed Frameworks */,
+				019592D6209EEC0500C445FE /* Nuke.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -64,10 +87,25 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		019592B9209EDF7800C445FE /* WallpaperCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallpaperCell.swift; sourceTree = "<group>"; };
+		019592C0209EEC0400C445FE /* Nuke.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Nuke.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		019592C3209EEC0400C445FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		019592DD209EEC5200C445FE /* DataLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataLoader.swift; sourceTree = "<group>"; };
+		019592DE209EEC5200C445FE /* ImagePipeline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePipeline.swift; sourceTree = "<group>"; };
+		019592DF209EEC5200C445FE /* ImagePreheater.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePreheater.swift; sourceTree = "<group>"; };
+		019592E0209EEC5200C445FE /* Deprecated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deprecated.swift; sourceTree = "<group>"; };
+		019592E1209EEC5200C445FE /* DataCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataCache.swift; sourceTree = "<group>"; };
+		019592E2209EEC5200C445FE /* ImageProcessing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageProcessing.swift; sourceTree = "<group>"; };
+		019592E3209EEC5200C445FE /* ImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
+		019592E4209EEC5200C445FE /* ImageCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
+		019592E5209EEC5200C445FE /* ImageRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageRequest.swift; sourceTree = "<group>"; };
+		019592E6209EEC5300C445FE /* ImageDecoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDecoding.swift; sourceTree = "<group>"; };
+		019592E7209EEC5300C445FE /* Internal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Internal.swift; sourceTree = "<group>"; };
+		019592F5209EFDEF00C445FE /* WallpaperDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallpaperDetailViewController.swift; sourceTree = "<group>"; };
+		019592F7209F009500C445FE /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 		01A173CE209DF15E003009C5 /* MR Wall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MR Wall.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		01A173D1209DF15E003009C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		01A173D3209DF15E003009C5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		01A173D6209DF15E003009C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		01A173D3209DF15E003009C5 /* WallpaperCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallpaperCollectionViewController.swift; sourceTree = "<group>"; };
 		01A173D8209DF160003009C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		01A173DB209DF160003009C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		01A173DD209DF160003009C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -85,11 +123,19 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		019592BC209EEC0400C445FE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		01A173CB209DF15E003009C5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				01A173FD209DF1C4003009C5 /* Backend.framework in Frameworks */,
+				019592D5209EEC0500C445FE /* Nuke.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,12 +157,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		019592C1209EEC0400C445FE /* Nuke */ = {
+			isa = PBXGroup;
+			children = (
+				019592E1209EEC5200C445FE /* DataCache.swift */,
+				019592DD209EEC5200C445FE /* DataLoader.swift */,
+				019592E0209EEC5200C445FE /* Deprecated.swift */,
+				019592E4209EEC5200C445FE /* ImageCache.swift */,
+				019592E6209EEC5300C445FE /* ImageDecoding.swift */,
+				019592DE209EEC5200C445FE /* ImagePipeline.swift */,
+				019592DF209EEC5200C445FE /* ImagePreheater.swift */,
+				019592E2209EEC5200C445FE /* ImageProcessing.swift */,
+				019592E5209EEC5200C445FE /* ImageRequest.swift */,
+				019592E3209EEC5200C445FE /* ImageView.swift */,
+				019592E7209EEC5300C445FE /* Internal.swift */,
+				019592C3209EEC0400C445FE /* Info.plist */,
+			);
+			path = Nuke;
+			sourceTree = "<group>";
+		};
 		01A173C5209DF15E003009C5 = {
 			isa = PBXGroup;
 			children = (
 				01A173D0209DF15E003009C5 /* MR Wall */,
 				01A173E9209DF1C3003009C5 /* Backend */,
 				01A173F6209DF1C4003009C5 /* BackendTests */,
+				019592C1209EEC0400C445FE /* Nuke */,
 				01A173CF209DF15E003009C5 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -127,6 +193,7 @@
 				01A173CE209DF15E003009C5 /* MR Wall.app */,
 				01A173E8209DF1C3003009C5 /* Backend.framework */,
 				01A173F0209DF1C4003009C5 /* BackendTests.xctest */,
+				019592C0209EEC0400C445FE /* Nuke.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -135,7 +202,10 @@
 			isa = PBXGroup;
 			children = (
 				01A173D1209DF15E003009C5 /* AppDelegate.swift */,
-				01A173D3209DF15E003009C5 /* ViewController.swift */,
+				01A173D3209DF15E003009C5 /* WallpaperCollectionViewController.swift */,
+				019592B9209EDF7800C445FE /* WallpaperCell.swift */,
+				019592F5209EFDEF00C445FE /* WallpaperDetailViewController.swift */,
+				019592F7209F009500C445FE /* UIViewController+Alert.swift */,
 				01A17412209DF1E8003009C5 /* Others */,
 			);
 			path = "MR Wall";
@@ -175,7 +245,6 @@
 		01A17412209DF1E8003009C5 /* Others */ = {
 			isa = PBXGroup;
 			children = (
-				01A173D5209DF15E003009C5 /* Main.storyboard */,
 				01A173D8209DF160003009C5 /* Assets.xcassets */,
 				01A173DA209DF160003009C5 /* LaunchScreen.storyboard */,
 				01A173DD209DF160003009C5 /* Info.plist */,
@@ -186,6 +255,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		019592BD209EEC0400C445FE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		01A173E5209DF1C3003009C5 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -197,6 +273,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		019592BF209EEC0400C445FE /* Nuke */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 019592D7209EEC0500C445FE /* Build configuration list for PBXNativeTarget "Nuke" */;
+			buildPhases = (
+				019592BB209EEC0400C445FE /* Sources */,
+				019592BC209EEC0400C445FE /* Frameworks */,
+				019592BD209EEC0400C445FE /* Headers */,
+				019592BE209EEC0400C445FE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Nuke;
+			productName = Nuke;
+			productReference = 019592C0209EEC0400C445FE /* Nuke.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		01A173CD209DF15E003009C5 /* MR Wall */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 01A173E0209DF160003009C5 /* Build configuration list for PBXNativeTarget "MR Wall" */;
@@ -210,6 +304,7 @@
 			);
 			dependencies = (
 				01A173FC209DF1C4003009C5 /* PBXTargetDependency */,
+				019592D4209EEC0500C445FE /* PBXTargetDependency */,
 			);
 			name = "MR Wall";
 			productName = "MR Wall";
@@ -263,6 +358,10 @@
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "Chen Zerui";
 				TargetAttributes = {
+					019592BF209EEC0400C445FE = {
+						CreatedOnToolsVersion = 9.4;
+						LastSwiftMigration = 0940;
+					};
 					01A173CD209DF15E003009C5 = {
 						CreatedOnToolsVersion = 9.4;
 					};
@@ -292,11 +391,19 @@
 				01A173CD209DF15E003009C5 /* MR Wall */,
 				01A173E7209DF1C3003009C5 /* Backend */,
 				01A173EF209DF1C4003009C5 /* BackendTests */,
+				019592BF209EEC0400C445FE /* Nuke */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		019592BE209EEC0400C445FE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		01A173CC209DF15E003009C5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -304,7 +411,6 @@
 				01A17417209DF610003009C5 /* DataStore.xcdatamodeld in Resources */,
 				01A173DC209DF160003009C5 /* LaunchScreen.storyboard in Resources */,
 				01A173D9209DF160003009C5 /* Assets.xcassets in Resources */,
-				01A173D7209DF15E003009C5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,11 +431,32 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		019592BB209EEC0400C445FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				019592EB209EEC5300C445FE /* Deprecated.swift in Sources */,
+				019592EC209EEC5300C445FE /* DataCache.swift in Sources */,
+				019592EF209EEC5300C445FE /* ImageCache.swift in Sources */,
+				019592ED209EEC5300C445FE /* ImageProcessing.swift in Sources */,
+				019592F1209EEC5300C445FE /* ImageDecoding.swift in Sources */,
+				019592E8209EEC5300C445FE /* DataLoader.swift in Sources */,
+				019592EA209EEC5300C445FE /* ImagePreheater.swift in Sources */,
+				019592EE209EEC5300C445FE /* ImageView.swift in Sources */,
+				019592F2209EEC5300C445FE /* Internal.swift in Sources */,
+				019592F0209EEC5300C445FE /* ImageRequest.swift in Sources */,
+				019592E9209EEC5300C445FE /* ImagePipeline.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		01A173CA209DF15E003009C5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01A173D4209DF15E003009C5 /* ViewController.swift in Sources */,
+				019592F8209F009500C445FE /* UIViewController+Alert.swift in Sources */,
+				019592F6209EFDEF00C445FE /* WallpaperDetailViewController.swift in Sources */,
+				01A173D4209DF15E003009C5 /* WallpaperCollectionViewController.swift in Sources */,
+				019592BA209EDF7800C445FE /* WallpaperCell.swift in Sources */,
 				01A173D2209DF15E003009C5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -357,6 +484,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		019592D4209EEC0500C445FE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 019592BF209EEC0400C445FE /* Nuke */;
+			targetProxy = 019592D3209EEC0500C445FE /* PBXContainerItemProxy */;
+		};
 		01A173F3209DF1C4003009C5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 01A173E7209DF1C3003009C5 /* Backend */;
@@ -375,14 +507,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		01A173D5209DF15E003009C5 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				01A173D6209DF15E003009C5 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		01A173DA209DF160003009C5 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -394,6 +518,69 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		019592D8209EEC0500C445FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 789MW96BQB;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Nuke/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Zerui.Nuke;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		019592D9209EEC0500C445FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 789MW96BQB;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Nuke/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Zerui.Nuke;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		01A173DE209DF160003009C5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -516,6 +703,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 789MW96BQB;
 				INFOPLIST_FILE = "$(SRCROOT)/MR Wall/Others/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -535,6 +723,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 789MW96BQB;
 				INFOPLIST_FILE = "$(SRCROOT)/MR Wall/Others/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -560,6 +749,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "$(SRCROOT)/Backend/Others/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -590,6 +780,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "$(SRCROOT)/Backend/Others/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -609,7 +800,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 789MW96BQB;
 				INFOPLIST_FILE = BackendTests/Info.plist;
@@ -630,7 +820,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 789MW96BQB;
 				INFOPLIST_FILE = BackendTests/Info.plist;
@@ -650,6 +839,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		019592D7209EEC0500C445FE /* Build configuration list for PBXNativeTarget "Nuke" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				019592D8209EEC0500C445FE /* Debug */,
+				019592D9209EEC0500C445FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		01A173C9209DF15E003009C5 /* Build configuration list for PBXProject "MR Wall" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

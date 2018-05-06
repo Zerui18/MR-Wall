@@ -8,7 +8,7 @@
 
 import CoreData
 
-class PersistenceManager {
+public class PersistenceManager {
     
     // MARK: Private Properties
     private let container: NSPersistentContainer
@@ -31,6 +31,9 @@ class PersistenceManager {
         g.wait()
         
         wallpapers = try! container.viewContext.fetch(Wallpaper.fetchRequest())
+        NotificationCenter.default.addObserver(forName: .UIApplicationWillResignActive, object: nil, queue: .main) { _ in
+            try! self.saveContext()
+        }
     }
     
     // MARK: Private Methods
@@ -56,6 +59,7 @@ class PersistenceManager {
 //        }
 //    }
 
+    // MARK: Public Methods
     func saveContext() throws {
         try container.viewContext.save()
     }

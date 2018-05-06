@@ -28,7 +28,7 @@ public class WallpaperManager {
     private struct Constants {
         fileprivate static let binaryBegin = "crop.json".data(using: .utf8)!
         fileprivate static let binaryEnd = "]PK".data(using: .utf8)!
-        fileprivate static let maxRetryCount = 10
+        fileprivate static let maxRetryCount = 20
     }
     
     // MARK: Public Properties
@@ -66,7 +66,7 @@ public class WallpaperManager {
     }
     
     private func loadSize(for wallpaper: Wallpaper, onComplete handler: @escaping (Bool)-> Void) {
-        let metaURL = URL(string: wallpaper.fileURL!)!
+        let metaURL = URL(string: wallpaper.fileURL!.replacingOccurrences(of: " ", with: "%20"))!
         
         urlSession.dataTask(with: metaURL) { (data, _, _) in
             guard let data = data else {
@@ -121,7 +121,7 @@ public class WallpaperManager {
                 return
             }
             
-            urlSession.dataTask(with: wallpaper.getImageURL(for: wallpaper.size!, resizeOption: .fitInside)) { (data, _, _) in
+            urlSession.dataTask(with: wallpaper.getImageURL(for: size, resizeOption: .fitInside)) { (data, _, _) in
                 
                 // do not retry if failure is due to connectivity
                 guard let data = data else {
@@ -136,6 +136,7 @@ public class WallpaperManager {
                 // data is invalid, retry with smaller size
                 else {
                     let newSize = CGSize(width: size.width * 0.9, height: size.height * 0.9)
+                    wallpaper.size = newSize
                     fetchImage(size: newSize, retryCount: retryCount + 1)
                 }
             }.resume()

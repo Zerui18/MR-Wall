@@ -38,6 +38,16 @@
                ReferencedContainer = "container:MR Wall.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "019592C7209EEC0500C445FE"
+               BuildableName = "NukeTests.xctest"
+               BlueprintName = "NukeTests"
+               ReferencedContainer = "container:MR Wall.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
