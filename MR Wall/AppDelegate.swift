@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Nuke
 import Backend
 
 @UIApplicationMain
@@ -16,7 +17,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        window?.rootViewController = UINavigationController(rootViewController: WallpaperCollectionViewController())
+        let paths = [\WallpaperManager.allWallpapers, \WallpaperManager.markedWallappers]
+        let items = [UITabBarItem(title: "All", image: nil, tag: 0), UITabBarItem(title: "Marked", image: nil, tag: 0)]
+        let rootVC = UITabBarController()
+        rootVC.viewControllers = zip(paths, items).map {
+            let vc = WallpaperCollectionViewController(sourceRef: $0)
+            vc.tabBarItem = $1
+            return UINavigationController(rootViewController: vc)
+        }
+        window?.rootViewController = rootVC
         window?.makeKeyAndVisible()
         return true
     }

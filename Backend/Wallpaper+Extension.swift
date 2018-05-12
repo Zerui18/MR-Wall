@@ -8,30 +8,40 @@
 
 import Foundation
 
+fileprivate var key1 = true
+
 extension Wallpaper {
     
-    public enum ResizeOption: String {
-        case fit, fitInside
+    public var imageURLThumb: URL {
+        get {
+            if let url = objc_getAssociatedObject(self, &key1) as? URL {
+                return url
+            }
+            else {
+                let url = getImageURL()
+                objc_setAssociatedObject(self, &key1, url, .OBJC_ASSOCIATION_COPY)
+                return url
+            }
+        }
     }
     
-    public var size: CGSize? {
-        get {
-            guard width != 0 && height != 0 else {
-                return nil
-            }
-            return CGSize(width: width, height: height)
-        }
-        set {
-            
-            width = Double(newValue?.width ?? 0)
-            height = Double(newValue?.height ?? 0)
-        }
+    public var imageURLFull: URL {
+        return getImageURL(fullsize: true)
     }
     
     @inline(__always)
-    public func getImageURL(for size: CGSize, resizeOption: ResizeOption = .fit)-> URL {
+    private func getImageURL(fullsize: Bool = false)-> URL {
         let path = fileURL!.replacingOccurrences(of: "http:/", with: "").replacingOccurrences(of: ".mwa", with: "")
-        return URL(string: "http://imangazo.mrcdn.info\(path.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed)!)/phone_\(size.width)_\(size.height)_\(resizeOption).jpg")!
+        if fullsize {
+            return URL(string: "http://imangazo.mrcdn.info\(path.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed)!)/phone_\(Int(width))_\(Int(height))_fitInside.jpg")!
+        }
+        return URL(string: "http://imangazo.mrcdn.info\(path.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed)!)/list_\(800)_\(800)_fit.jpg")!
     }
     
+}
+
+extension Wallpaper: Comparable {
+    public static func < (lhs: Wallpaper, rhs: Wallpaper) -> Bool {
+        return lhs.order < rhs.order
+    }
 }

@@ -35,10 +35,12 @@ public class WallpaperManager {
     public var allWallpapers: [Wallpaper] {
         return persistenceManager.wallpapers
     }
+    public var markedWallappers: [Wallpaper]
     
     // MARK: Public Init
     public init() {
         persistenceManager = PersistenceManager(model: "DataStore")
+        markedWallappers = persistenceManager.wallpapers.filter {$0.marked}
     }
     
     // MARK: Private Methods
@@ -50,19 +52,17 @@ public class WallpaperManager {
         for item in items {
             let name = item["name"] as! String
             let fileURL = item["fileUrl"] as! String
-            if let new = self.persistenceManager.save(wallpaper: (name, fileURL)) {
-                persistenceManager.wallpapers.append(new)
-            }
+            self.persistenceManager.save(wallpaper: (name, fileURL))
         }
         return true
     }
     
-    private func parseMWAJson(data: Data)-> CGSize{
+    private func parseMWAJson(data: Data)-> (Double, Double){
         var article = data[data.range(of: Constants.binaryBegin)!.upperBound...]
         article = article[...article.range(of: Constants.binaryEnd)!.lowerBound]
         let json = try! JSONSerialization.jsonObject(with: article, options: []) as! [[String: Any]]
         let item = json.last!
-        return CGSize(width: (item["imageWidth"] as! NSNumber).doubleValue, height: (item["imageHeight"] as! NSNumber).doubleValue)
+        return ((item["imageWidth"] as! NSNumber).doubleValue, (item["imageHeight"] as! NSNumber).doubleValue)
     }
     
     private func loadSize(for wallpaper: Wallpaper, onComplete handler: @escaping (Bool)-> Void) {
@@ -75,7 +75,8 @@ public class WallpaperManager {
             }
             
             let size = self.parseMWAJson(data: data)
-            wallpaper.size = size
+            wallpaper.width = size.0
+            wallpaper.height = size.1
             handler(true)
         }.resume()
     }
@@ -115,13 +116,12 @@ public class WallpaperManager {
     public func loadFullImage(for wallpaper: Wallpaper, onComplete handler: @escaping (UIImage?)-> Void) {
         
         // recursively retry (up to 10 times) fetching the largest valid image
-        func fetchImage(size: CGSize, retryCount: Int = 0) {
+        func fetchImage(retryCount: Int = 0) {
             guard retryCount < Constants.maxRetryCount else {
                 handler(nil)
                 return
             }
-            
-            urlSession.dataTask(with: wallpaper.getImageURL(for: size, resizeOption: .fitInside)) { (data, _, _) in
+            urlSession.dataTask(with: wallpaper.imageURLFull) { (data, _, _) in
                 
                 // do not retry if failure is due to connectivity
                 guard let data = data else {
@@ -135,26 +135,45 @@ public class WallpaperManager {
                 }
                 // data is invalid, retry with smaller size
                 else {
-                    let newSize = CGSize(width: size.width * 0.9, height: size.height * 0.9)
-                    wallpaper.size = newSize
-                    fetchImage(size: newSize, retryCount: retryCount + 1)
+                    wallpaper.width *= 0.9
+                    wallpaper.height *= 0.9
+                    fetchImage(retryCount: retryCount + 1)
                 }
             }.resume()
         }
         
-        if let size = wallpaper.size {
-            fetchImage(size: size)
+        if wallpaper.width != 0 {
+            fetchImage()
         }
         else {
             loadSize(for: wallpaper) { (success) in
                 if success {
-                    fetchImage(size: wallpaper.size!)
+                    fetchImage()
                 }
                 else {
                     handler(nil)
                 }
             }
         }
+    }
+    
+    /**
+     Set the marked property of the Wallpaper to the given value, updates markedWallpapers accordingly.
+     - returns: the index of the Wallpaper in markedWallpapers
+     */
+    public func setMarked(_ marked: Bool, of wallpaper: Wallpaper)-> Int{
+        wallpaper.marked = marked
+        
+        let index: Int
+        if marked {
+            index = markedWallappers.insertSorted(wallpaper)
+        }
+        else {
+            index = markedWallappers.index(of: wallpaper)!
+            markedWallappers.remove(at: index)
+        }
+        
+        return index
     }
     
 }

@@ -30,7 +30,9 @@ public class PersistenceManager {
         }
         g.wait()
         
-        wallpapers = try! container.viewContext.fetch(Wallpaper.fetchRequest())
+        let request: NSFetchRequest<Wallpaper> = Wallpaper.fetchRequest()
+        request.sortDescriptors = [NSSortDescriptor(keyPath: \Wallpaper.order, ascending: true)]
+        wallpapers = try! container.viewContext.fetch(request)
         NotificationCenter.default.addObserver(forName: .UIApplicationWillResignActive, object: nil, queue: .main) { _ in
             try! self.saveContext()
         }
@@ -44,20 +46,14 @@ public class PersistenceManager {
     }
     
     // MARK: Internal Methods
-    func save(wallpaper: (String, String))-> Wallpaper? {
+    func save(wallpaper: (String, String)) {
         if !hasSaved(wallpaper: wallpaper.1) {
             let obj = Wallpaper(context: container.viewContext)
             obj.fileURL = wallpaper.1
-            return obj
+            obj.order = Int64(wallpapers.count)
+            wallpapers.append(obj)
         }
-        return nil
     }
-    
-//    func save(wallpapers: [(String, String)]) {
-//        for wallpaper in wallpapers {
-//            save(wallpapers: <#T##[(String, String)]#>)
-//        }
-//    }
 
     // MARK: Public Methods
     func saveContext() throws {

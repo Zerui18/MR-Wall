@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		014B4B9A20A486FB00A60B38 /* Array+InsertionPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014B4B9920A486FB00A60B38 /* Array+InsertionPoint.swift */; };
 		019592BA209EDF7800C445FE /* WallpaperCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019592B9209EDF7800C445FE /* WallpaperCell.swift */; };
 		019592D5209EEC0500C445FE /* Nuke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 019592C0209EEC0400C445FE /* Nuke.framework */; };
 		019592D6209EEC0500C445FE /* Nuke.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 019592C0209EEC0400C445FE /* Nuke.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -38,6 +39,7 @@
 		01A1740F209DF1D6003009C5 /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A1740A209DF1D5003009C5 /* PersistenceManager.swift */; };
 		01A17410209DF1D6003009C5 /* Dictionary+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A1740B209DF1D6003009C5 /* Dictionary+Extension.swift */; };
 		01A17417209DF610003009C5 /* DataStore.xcdatamodeld in Resources */ = {isa = PBXBuildFile; fileRef = 01A17407209DF1D5003009C5 /* DataStore.xcdatamodeld */; };
+		01AC8F6C20A5D86E00369200 /* Notification.Name+MarkStateChanged.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AC8F6920A5D4F600369200 /* Notification.Name+MarkStateChanged.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +89,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		014B4B9920A486FB00A60B38 /* Array+InsertionPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+InsertionPoint.swift"; sourceTree = "<group>"; };
 		019592B9209EDF7800C445FE /* WallpaperCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallpaperCell.swift; sourceTree = "<group>"; };
 		019592C0209EEC0400C445FE /* Nuke.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Nuke.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		019592C3209EEC0400C445FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -103,6 +106,7 @@
 		019592E7209EEC5300C445FE /* Internal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Internal.swift; sourceTree = "<group>"; };
 		019592F5209EFDEF00C445FE /* WallpaperDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallpaperDetailViewController.swift; sourceTree = "<group>"; };
 		019592F7209F009500C445FE /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
+		019592F9209F08FF00C445FE /* Noise3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Noise3.mlmodel; sourceTree = "<group>"; };
 		01A173CE209DF15E003009C5 /* MR Wall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MR Wall.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		01A173D1209DF15E003009C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01A173D3209DF15E003009C5 /* WallpaperCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallpaperCollectionViewController.swift; sourceTree = "<group>"; };
@@ -120,6 +124,7 @@
 		01A17409209DF1D5003009C5 /* Wallpaper+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Wallpaper+Extension.swift"; sourceTree = "<group>"; };
 		01A1740A209DF1D5003009C5 /* PersistenceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
 		01A1740B209DF1D6003009C5 /* Dictionary+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extension.swift"; sourceTree = "<group>"; };
+		01AC8F6920A5D4F600369200 /* Notification.Name+MarkStateChanged.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification.Name+MarkStateChanged.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,6 +211,7 @@
 				019592B9209EDF7800C445FE /* WallpaperCell.swift */,
 				019592F5209EFDEF00C445FE /* WallpaperDetailViewController.swift */,
 				019592F7209F009500C445FE /* UIViewController+Alert.swift */,
+				01AC8F6920A5D4F600369200 /* Notification.Name+MarkStateChanged.swift */,
 				01A17412209DF1E8003009C5 /* Others */,
 			);
 			path = "MR Wall";
@@ -214,7 +220,9 @@
 		01A173E9209DF1C3003009C5 /* Backend */ = {
 			isa = PBXGroup;
 			children = (
+				019592F9209F08FF00C445FE /* Noise3.mlmodel */,
 				01A1740B209DF1D6003009C5 /* Dictionary+Extension.swift */,
+				014B4B9920A486FB00A60B38 /* Array+InsertionPoint.swift */,
 				01A1740A209DF1D5003009C5 /* PersistenceManager.swift */,
 				01A17406209DF1D5003009C5 /* WallpaperManager.swift */,
 				01A17409209DF1D5003009C5 /* Wallpaper+Extension.swift */,
@@ -455,6 +463,7 @@
 			files = (
 				019592F8209F009500C445FE /* UIViewController+Alert.swift in Sources */,
 				019592F6209EFDEF00C445FE /* WallpaperDetailViewController.swift in Sources */,
+				01AC8F6C20A5D86E00369200 /* Notification.Name+MarkStateChanged.swift in Sources */,
 				01A173D4209DF15E003009C5 /* WallpaperCollectionViewController.swift in Sources */,
 				019592BA209EDF7800C445FE /* WallpaperCell.swift in Sources */,
 				01A173D2209DF15E003009C5 /* AppDelegate.swift in Sources */,
@@ -465,6 +474,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				014B4B9A20A486FB00A60B38 /* Array+InsertionPoint.swift in Sources */,
 				01A1740C209DF1D6003009C5 /* WallpaperManager.swift in Sources */,
 				01A1740E209DF1D6003009C5 /* Wallpaper+Extension.swift in Sources */,
 				01A1740D209DF1D6003009C5 /* DataStore.xcdatamodeld in Sources */,
