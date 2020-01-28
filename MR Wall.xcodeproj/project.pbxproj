@@ -106,7 +106,6 @@
 		019592E7209EEC5300C445FE /* Internal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Internal.swift; sourceTree = "<group>"; };
 		019592F5209EFDEF00C445FE /* WallpaperDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallpaperDetailViewController.swift; sourceTree = "<group>"; };
 		019592F7209F009500C445FE /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
-		019592F9209F08FF00C445FE /* Noise3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Noise3.mlmodel; sourceTree = "<group>"; };
 		01A173CE209DF15E003009C5 /* MR Wall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MR Wall.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		01A173D1209DF15E003009C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01A173D3209DF15E003009C5 /* WallpaperCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallpaperCollectionViewController.swift; sourceTree = "<group>"; };
@@ -220,7 +219,6 @@
 		01A173E9209DF1C3003009C5 /* Backend */ = {
 			isa = PBXGroup;
 			children = (
-				019592F9209F08FF00C445FE /* Noise3.mlmodel */,
 				01A1740B209DF1D6003009C5 /* Dictionary+Extension.swift */,
 				014B4B9920A486FB00A60B38 /* Array+InsertionPoint.swift */,
 				01A1740A209DF1D5003009C5 /* PersistenceManager.swift */,

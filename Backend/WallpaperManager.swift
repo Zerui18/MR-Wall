@@ -17,7 +17,7 @@ public class WallpaperManager {
         let apiURL = URL(string: "https://api.mangarockhd.com/parse/functions/getWallpaperList")!
         var request = URLRequest(url: apiURL)
         request.allHTTPHeaderFields = [
-            "x-parse-session-token": "r:92d628ea0b234a1557d0fa39555d4c8f",
+            "Content-Type": "application/json",
             "x-parse-application-id": "DOTecsAUU0hHsVe50hQqCltNmpzx5hbwJB60FfyM",
             "x-parse-client-key": "lpY0gkLg4LOtrTAtNT1L1vwC1llTWkr0F8wusC5i"
         ]

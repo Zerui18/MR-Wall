@@ -119,7 +119,7 @@ class WallpaperCollectionViewController: UICollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let wallpaper = manager[keyPath: sourceRef][indexPath.item]
-        navigationController!.pushViewController(WallpaperDetailViewController(wallpaper: wallpaper), animated: true)
+        navigationController!.pushViewController(WallpaperDetailViewController.create(wallpaper: wallpaper), animated: true)
     }
 
 }

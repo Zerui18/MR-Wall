@@ -11,7 +11,7 @@ import Backend
 
 class WallpaperDetailViewController: UIViewController, UIScrollViewDelegate{
     
-    static func `init`(wallpaper: Wallpaper)-> WallpaperDetailViewController {
+    static func create(wallpaper: Wallpaper)-> WallpaperDetailViewController {
         let ctr = WallpaperDetailViewController()
         ctr.wallpaper = wallpaper
         return ctr
